@@ -8,7 +8,8 @@ import java.io.IOException;
 import com.google.gson.Gson;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-import java.text.ParseException;
+import org.json.simple.parser.ParseException;
+
 import java.util.Scanner;
 
 public class LocalizaIP {
@@ -23,21 +24,17 @@ public class LocalizaIP {
             while ((linea = lectorJson.readLine()) != null) {
                 json += linea;
             }
-
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        /*float num = 0;
-        Scanner leer = new Scanner(System.in);
-
-        System.out.print("Introduzca una IP: ");
-        num = leer.nextFloat();
-
         Gson gson = new Gson();
         User p = gson.fromJson(json, User.class);
+
+        long num = 0;
+        p.setNum(2532573185L);
 
         if (num >= p.getIp_from() && num <= p.getIp_to()) {
             System.out.println("ip_from:" + p.getIp_from());
@@ -50,9 +47,9 @@ public class LocalizaIP {
             System.out.println("longitude:" + p.getLongitude());
             System.out.println("zip_code:" + p.getZip_code());
             System.out.println("time_zone:" + p.getTime_zone());
-        }*/
+        }
 
-        System.out.println(json);
+        //System.out.println(json);
 
     }
 }
