@@ -40,7 +40,16 @@ public class LocalizaIP {
         User p = gson.fromJson(json, User.class);
 
         if (num >= p.getIp_from() && num <= p.getIp_to()) {
-            System.out.println(json);
+            System.out.println("ip_from:" + p.getIp_from());
+            System.out.println("ip_to:" + p.getIp_to());
+            System.out.println("country_zone:" + p.getCountry_code());
+            System.out.println("country_name:" + p.getCountry_name());
+            System.out.println("region_name:" + p.getRegion_name());
+            System.out.println("city_name:" + p.getCity_name());
+            System.out.println("latitude:" + p.getLatitude());
+            System.out.println("longitude:" + p.getLongitude());
+            System.out.println("zip_code:" + p.getZip_code());
+            System.out.println("time_zone:" + p.getTime_zone());
         }*/
 
         System.out.println(json);
