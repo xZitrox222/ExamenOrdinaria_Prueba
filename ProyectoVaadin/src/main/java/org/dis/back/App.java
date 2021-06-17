@@ -1,6 +1,5 @@
-package org.dis.back;
+/*package org.dis.back;
 
-import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -13,11 +12,11 @@ public class App {
 
     public static void main(String[] args) throws IOException, ParseException{
 
-        int num = 0;
+        float num = 0;
         Scanner leer = new Scanner(System.in);
 
         System.out.print("Introduzca una IP: ");
-        num = leer.nextInt();
+        num = leer.nextFloat();
 
         JSONParser jsonparser = new JSONParser();
 
@@ -28,8 +27,8 @@ public class App {
         JSONObject empjsonobj = (JSONObject)obj;
 
 
-        int ipF = (int) empjsonobj.get("ip_from");
-        int ipT = (int) empjsonobj.get("ip_to");
+        float ipF = (float) empjsonobj.get("ip_from");
+        float ipT = (float) empjsonobj.get("ip_to");
 
         if (num >= ipF && num <= ipT) {
 
@@ -56,4 +55,4 @@ public class App {
 
     }
 
-}
+}*/
