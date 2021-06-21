@@ -105,6 +105,5 @@ public class User {
         this.time_zone = time_zone;
     }
 
-    public void setNum(long i) {
-    }
 }
+

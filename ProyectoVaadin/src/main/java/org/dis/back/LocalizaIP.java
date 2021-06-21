@@ -14,7 +14,7 @@ import java.util.Scanner;
 
 public class LocalizaIP {
 
-    public static void main( String[] args ) {
+    public static void main(String[] args ) {
         String json = "";
 
         try {
@@ -33,8 +33,15 @@ public class LocalizaIP {
         Gson gson = new Gson();
         User p = gson.fromJson(json, User.class);
 
-        long num = 0;
-        p.setNum(2532573185L);
+        //p.setNum(2532573185L);
+
+        long num;
+        Scanner leer = new Scanner(System.in);
+
+        System.out.print("Introduzca un número: ");
+        num = leer.nextLong();
+
+        //Solo lee el bucle si el valor es cero, y aun así no funciona
 
         if (num >= p.getIp_from() && num <= p.getIp_to()) {
             System.out.println("ip_from:" + p.getIp_from());
