@@ -8,6 +8,8 @@ import org.json.simple.parser.JSONParser;
 
 import java.util.Scanner;
 
+//EL PROGRAMA SOLO FUNCIONA SI INTRODUCES LAS IPS EN ORDEN
+
 public class LocalizaIP_sinGson {
     public static void main(String[] args) throws Exception {
         JSONParser parser = new JSONParser();
