@@ -31,7 +31,7 @@ public class LocalizaIP_conGson {
         }
 
         Gson gson = new Gson();
-        User p = gson.fromJson(json, User.class);
+        IP p = gson.fromJson(json, IP.class);
 
         long num;
         Scanner leer = new Scanner(System.in);
