@@ -6,12 +6,8 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
-import java.util.Scanner;
-
-//EL PROGRAMA SOLO FUNCIONA SI INTRODUCES LAS IPS EN ORDEN
-
 public class LocalizaIP_sinGson {
-    public static void main(String[] args) throws Exception {
+    public static void Localizar(String num_string) throws Exception {
         JSONParser parser = new JSONParser();
         FileReader reader = new FileReader("LocalizaIP.json");
         Object obj = parser.parse(reader);
@@ -44,11 +40,9 @@ public class LocalizaIP_sinGson {
             System.out.println("time_zone: " + time_zone);
             System.out.println("\n");*/
 
-            long num;
-            Scanner leer = new Scanner(System.in);
+            long num=Long.parseLong(num_string);
 
             System.out.print("Introduzca una IP: ");
-            num = leer.nextLong();
 
             if (num >= ip_from && num <= ip_to) {
                 System.out.println("\nDatos: ");
@@ -63,7 +57,7 @@ public class LocalizaIP_sinGson {
                 System.out.println("zip_code: " + zip_code);
                 System.out.println("time_zone: " + time_zone);
                 System.out.println("\n");
-            }
+            };
         }
     }
 }
