@@ -1,0 +1,31 @@
+3.a
+git branch Temporal
+git push origin Temporal
+git checkout Temporal
+
+3.b
+nano MisDatos.txt
+(Escribir nombre en línea 1)
+git add .
+git commit -m "MD1"
+nano MisDatos.txt
+(Escribir fecha de nacimiento en línea 2)
+git add .
+git commit -m "MD2"
+nano MisDatos.txt
+(Escribir lugar de nacimiento en línea 3)
+git add .
+git commit -m "MD3"
+git push origin Temporal
+
+3.c
+git checkout main
+git merge Temporal
+git branch --d Temporal (la eliminamos en local)
+git branch --delete Temporal (la eliminamos en remoto)
+
+3.d
+git push origin main
+
+3.e
+git pull origin main
